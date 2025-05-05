@@ -1,40 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plant Carousel</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consultancy Website</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #2C3E91;
+      --secondary: #EAEAEA;
+      --accent: #F29D35;
+      --background: #FFFFFF;
+      --text: #1A1A1A;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-color: var(--secondary);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background-color: var(--accent);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .services {
+      padding: 3rem 2rem;
+      background-color: var(--background);
+      text-align: center;
+    }
+
+    .services h3 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .service-item {
+      max-width: 300px;
+      margin: 1rem auto;
+      padding: 1rem;
+      border: 1px solid var(--secondary);
+      border-radius: 6px;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .services-container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="carousel">
-    <button class="arrow arrow-left" onclick="moveSlide(-1)">&#8249;</button>
-    <div class="container">
-        <div class="slider" id="slider">
-            <div class="slide">
-                <img src="https://via.placeholder.com/150" alt="Varun Plant">
-                <div class="caption">VARUN PLANT</div>
-            </div>
-            <div class="slide">
-                <img src="https://via.placeholder.com/150" alt="Tamalpatra">
-                <div class="caption">TAMALPATRA</div>
-            </div>
-            <div class="slide">
-                <img src="https://via.placeholder.com/150" alt="Shalai Guggal">
-                <div class="caption">SHALAI GUGGAL</div>
-            </div>
-            <div class="slide">
-                <img src="https://via.placeholder.com/150" alt="Pippali Plant">
-                <div class="caption">PIPPALI PLANT</div>
-            </div>
-        </div>
-    </div>
-    <button class="arrow arrow-right" onclick="moveSlide(1)">&#8250;</button>
-</div>
+  <header>
+    <h1>RG Consultancy</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-<script src="script.js">
-</script>
+  <section class="hero">
+    <h2>Empowering Your Business Growth</h2>
+    <p>We provide expert solutions to help your business thrive in a competitive world.</p>
+    <a href="#" class="btn">Get in Touch</a>
+  </section>
+
+  <section class="services">
+    <h3>Our Services</h3>
+    <div class="services-container">
+      <div class="service-item">
+        <h4>Business Strategy</h4>
+        <p>Tailored strategies to boost your operations and revenue.</p>
+      </div>
+      <div class="service-item">
+        <h4>Market Analysis</h4>
+        <p>In-depth insights into your market to guide key decisions.</p>
+      </div>
+      <div class="service-item">
+        <h4>IT Consulting</h4>
+        <p>Technology-driven solutions for smarter growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 RG Consultancy. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
